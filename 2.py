@@ -1,3 +1,5 @@
+import timeit
+
 # Returns list of n fibonacci numbers
 def fib(n):
     a = 0
@@ -13,7 +15,12 @@ def fib(n):
 
     return fib_series
 
+start_time = timeit.default_timer()
+
 even_fibs = filter(lambda x: x % 2 == 0, fib(4000000))
 
 print sum(even_fibs)
 
+elapsed = timeit.default_timer() - start_time
+
+print("Evaluated in %.10f seconds." % elapsed)
