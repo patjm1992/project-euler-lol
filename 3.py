@@ -1,7 +1,7 @@
 import timeit
 import math
 
-start_time = timeit.de fault_timer()
+start_time = timeit.default_timer()
 
 target = 600851475143
 n = 2
