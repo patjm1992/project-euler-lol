@@ -10,7 +10,6 @@ def sieve(n):
     p = 2
 
     for p in nums:
-
         for i in xrange(p + p, n + 1, p):
             if i in nums:
                 nums.remove(i)
