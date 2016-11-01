@@ -111,4 +111,4 @@ plaintext = xor(bytes, correct_key)
 print "\nKEY: " + "".join(correct_key) # make key a string with join()
 print "\nDECRYPTED MESSAGE:\n------------------------------\n" + plaintext +"\n"
 
-print "Sum of ASCII values: " + str(sum_ascii_vals(plaintext))
+print "Sum of ASCII values: " + str(sum_ascii_vals(plaintext))    # I'm waiting on my answer, buddy
