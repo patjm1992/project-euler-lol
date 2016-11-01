@@ -1,7 +1,6 @@
 import itertools
 import sys
 
-threshold = 25  # see english_score()
 
 def generate_keys(characters, key_length):
     ''' Generate all permutations of a key of length 3 comprised only of lowercase letters.
@@ -11,7 +10,6 @@ def generate_keys(characters, key_length):
     :return: list of triples, ex: [('a', 'b', 'c'), ('a', 'c', 'b') ...]
     '''
     return itertools.permutations(characters, r=key_length)
-
 
 
 def xor(data, key):
@@ -86,6 +84,7 @@ wordlist = open("/usr/share/dict/american-english", 'r').read().split('\n') # I'
 
 scores = []
 decrypts = {}    # Hash table ('dictionary') where (Key: Score, Value: Encryption key)
+threshold = 25  # see english_score()
 
 
 print "CIPHER:\n------------------------------"
