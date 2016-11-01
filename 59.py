@@ -3,18 +3,16 @@ import sys
 
 threshold = 25  # see english_score()
 
-def sum_ascii_vals(text):
-    ''' Required by the problem.
+def generate_keys(characters, key_length):
+    ''' Generate all permutations of a key of length 3 comprised only of lowercase letters.
 
-    :return: the sum of the ASCII values
+    :param   characters: possible letters the key consists of
+    :param   key_length: fixed length of the key
+    :return: list of triples, ex: [('a', 'b', 'c'), ('a', 'c', 'b') ...]
     '''
+    return itertools.permutations(characters, r=key_length)
 
-    sum = 0
 
-    for char in text:
-        sum += ord(char)
-
-    return sum
 
 def xor(data, key):
     ''' XOR all characters of the data one-by-one and build a string.
@@ -38,21 +36,6 @@ def xor(data, key):
 
     return result
 
-def generate_keys(characters, key_length):
-    ''' Generate all permutations of a key of length 3 comprised only of lowercase letters.
-
-    :param   characters: possible letters the key consists of
-    :param   key_length: fixed length of the key
-    :return: list of triples, ex: [('a', 'b', 'c'), ('a', 'c', 'b') ...]
-    '''
-    return itertools.permutations(characters, r=key_length)
-
-f = open('p059_cipher.txt', 'r')    # Read the cipher into a variable
-bytes = map(lambda x: int(x), f.read().split(","))    # Make into a list of 'bytes'
-
-key_permutations = generate_keys("abcdefghijklmnopqrstuvwxyz", 3)    # Generate all possible keys
-
-wordlist = open("/usr/share/dict/american-english", 'r').read().split('\n') # I'm an OED man myself
 
 def english_score(text, wordlist):
     ''' Determine how likely a decryption is to be the correct one by how many English words
@@ -77,8 +60,33 @@ def english_score(text, wordlist):
 
     return score
 
+
+def sum_ascii_vals(text):
+    ''' Required by the problem.
+
+    :return: the sum of the ASCII values
+    '''
+
+    sum = 0
+
+    for char in text:
+        sum += ord(char)
+
+    return sum
+
+########################################################################################################################
+
+
+f = open('p059_cipher.txt', 'r')    # Read the cipher into a variable
+bytes = map(lambda x: int(x), f.read().split(","))    # Make into a list of 'bytes'
+
+key_permutations = generate_keys("abcdefghijklmnopqrstuvwxyz", 3)    # Generate all possible keys
+
+wordlist = open("/usr/share/dict/american-english", 'r').read().split('\n') # I'm an OED man myself
+
 scores = []
 decrypts = {}    # Hash table ('dictionary') where (Key: Score, Value: Encryption key)
+
 
 print "CIPHER:\n------------------------------"
 
