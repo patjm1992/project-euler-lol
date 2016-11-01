@@ -1,5 +1,6 @@
 import itertools
 import sys
+import timeit
 
 
 def generate_keys(characters, key_length):
@@ -74,6 +75,7 @@ def sum_ascii_vals(text):
 
 ########################################################################################################################
 
+start_time = timeit.default_timer()
 
 f = open('p059_cipher.txt', 'r')    # Read the cipher into a variable
 bytes = map(lambda x: int(x), f.read().split(","))    # Make into a list of 'bytes'
@@ -111,3 +113,7 @@ print "\nKEY: " + "".join(correct_key) # make key a string with join()
 print "\nDECRYPTED MESSAGE:\n------------------------------\n" + plaintext +"\n"
 
 print "Sum of ASCII values: " + str(sum_ascii_vals(plaintext))    # I'm waiting on my answer, buddy
+
+elapsed = timeit.default_timer() - start_time
+
+print("Evaluated in %.10f seconds." % elapsed)
