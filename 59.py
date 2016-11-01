@@ -27,7 +27,9 @@ def xor(data, key):
     '''
 
     key = [ord(c) for c in key]    # The key is in lower case letters; convert to bytes
-    li = zip(data, itertools.cycle(key))
+    li = zip(data, itertools.cycle(key))    # 'zip' the cipher characters and the key (cycled over and over) together
+
+    # print li # You kind've have to see this printed out to understand the zip()
 
     result = ""
 
