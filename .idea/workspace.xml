@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2de5d7e7-c76a-4b1b-8f44-6a31492284a1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p059_cipher.txt" afterPath="$PROJECT_DIR$/p059_cipher.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/59.py" afterPath="$PROJECT_DIR$/59.py" />
     </list>
     <ignored path="project-euler.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,9 +55,11 @@
       <file leaf-file-name="59.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/59.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="225">
+              <caret line="89" column="55" selection-start-line="89" selection-start-column="55" selection-end-line="89" selection-end-column="55" />
+              <folding>
+                <element signature="e#0#16#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -630,9 +632,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/59.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="225">
+          <caret line="89" column="55" selection-start-line="89" selection-start-column="55" selection-end-line="89" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
