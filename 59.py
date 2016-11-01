@@ -84,7 +84,7 @@ wordlist = open("/usr/share/dict/american-english", 'r').read().split('\n') # I'
 
 scores = []
 decrypts = {}    # Hash table ('dictionary') where (Key: Score, Value: Encryption key)
-threshold = 25  # see english_score()
+threshold = 25    # see english_score()
 
 
 print "CIPHER:\n------------------------------"
